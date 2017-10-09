@@ -23,6 +23,7 @@
         android:id="@+id/hello_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_button"/>
+        android:text="@string/hello_button"
+        android:onClick="sayHello" />
 
 </LinearLayout>
