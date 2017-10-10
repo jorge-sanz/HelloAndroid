@@ -9,6 +9,7 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     private EditText nameInput;
+    private EditText ageInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         nameInput = (EditText) findViewById(R.id.name_input);
+        ageInput = (EditText) findViewById(R.id.age_input);
     }
 
     public void sayHello(View view) {
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         Bundle bundle = new Bundle();
         bundle.putString("NAME", nameInput.getText().toString());
+        bundle.putInt("AGE", Integer.parseInt(ageInput.getText().toString()));
 
         intent.putExtras(bundle);
 

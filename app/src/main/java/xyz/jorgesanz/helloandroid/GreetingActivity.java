@@ -17,6 +17,10 @@ public class GreetingActivity extends AppCompatActivity {
 
         Bundle bundle = this.getIntent().getExtras();
 
-        greetingText.setText("Hello, " + bundle.getString("NAME"));
+        greetingText.setText("Hello, "
+                + bundle.getString("NAME")
+                + ", you are "
+                + bundle.getInt("AGE")
+                + " years old.");
     }
 }
